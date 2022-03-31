@@ -1,6 +1,4 @@
-﻿using CsvHelper;
-using CsvHelper.Configuration;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
@@ -13,15 +11,6 @@ namespace StarCraft
     class Program
     {
         private static readonly HttpClient _client = new HttpClient();
-        private static readonly CsvConfiguration _configNoHeader = new CsvConfiguration(CultureInfo.InvariantCulture)
-        {
-            HasHeaderRecord = false,
-            
-        };
-        private static readonly CsvConfiguration _configHeader = new CsvConfiguration(CultureInfo.InvariantCulture)
-        {
-            HasHeaderRecord = true,
-        };
 
         static void Main(string[] args)
         {
